@@ -1,48 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
 * {
-    border: 2px solid black;
+    /* border: 1px solid black; */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* box-sizing: border-box; */
+    font-family: "Roboto", sans-serif;
 }
 
 .parent {
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 1fr 4fr;
 }
 
-.parent > div {
-    height: 500px;
-}
 
-.content {
-    display: grid;
-    grid-template-rows: 25% 75%;
-}
 
 .sidebar {
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 1fr 4fr 4fr 4fr;
     background-color: #93c5fd;
-}
-
-.navigation {
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
-
-.pages {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-}
-
-.settings {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
 }
 
 .branding {
     display: grid;
-    grid-template-rows: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.navigation {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr 4fr;
+
+}
+
+
+.settings {
+    display: grid;
+    grid-template-rows: repeat(3, 20%);
+    grid-template-columns: 1fr 4fr;
+
+}
+
+
+
+.content {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
 }
 
 .data {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 11fr;
+    background-color: #e2e8f0;
+    gap: 2%;
+}
+
+.projects {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 2%;
+}
+
+.rightBar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.topbar {
+    display: grid;
+    grid-template: 2fr 3fr / 1fr 1fr ;
+    background-color: white;
+    gap: 2%;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.profilepicture {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectshow {
+    background-color: white;
+    border-radius: 10px;
 }
